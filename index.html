@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Criando um Repositório no GitHub</title>
+  </head>
+        <body>
+        <div class="container">
+            
+            <div class="title">
+                <h1>Criando um repositório no GitHub</h1>
+            </div>
+            <div class="conteudo">
+        
+            <div id="passo1" style="display:block">
+            <p>Ok, vamos começar do começo.</p>
+            <p>Você já criou um projeto local para enviar para o GitHub?</p>
+            <button onclick="proximo('sim')">Sim</button>
+            <button onclick="explicarPasso(2)">Não</button>
+            </div>
+            
+            <div id="passo2" style="display:none">
+            <p>Certo, então primeiro você precisa criar um projeto local.</p>
+            <p>Depois de criar um projeto local, volte aqui e clique em "Ok".</p>
+            <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo3" style="display:none">
+            <p>Ótimo! Agora que você tem um projeto local, o próximo passo é inicializar o Git.</p>
+            <p>Você já iniciou o Git?</p>
+            <button onclick="proximo('sim')">Sim</button>
+            <button onclick="explicarPasso(4)">Não</button>
+            </div>
+            
+            <div id="passo4" style="display:none">
+            <p>Ok, então vamos inicializar o Git.</p>
+            <p>Abra o terminal ou Git Bash e Navegue até a pasta onde está o diretório do seu projeto usando o comando cd. Por exemplo, se o seu projeto estiver na pasta  <p> </strong>"Documents/MeuProjeto"</strong></p>  Você pode navegar até ela digitando <p> <strong>  cd Documents/MeuProjeto.. </strong></p> </p>
+            <p>Em seguida, execute o seguinte comando:</p>
+            <code>git init</code>
+            <p>Depois de iniciar o Git, volte aqui e clique em "Ok".</p>
+            <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo5" style="display:none">
+            <p>Excelente! Agora que o Git está inicializado, o próximo passo é criar um arquivo README.md para o seu projeto.</p>
+            <p>Você já criou um arquivo README.md?</p>
+            <button onclick="proximo('sim')">Sim</button>
+            <button onclick="explicarPasso(6)">Não</button>
+            </div>
+            
+            <div id="passo6" style="display:none">
+            <p>Ok, então vamos criar o arquivo README.md.</p>
+            <p>Abra o terminal ou Git Bash e navegue até o diretório raiz do seu projeto.</p>
+            <p>Em seguida, execute o seguinte comando:</p>
+            <code>touch README.md</code>
+            <p>Depois de criar o arquivo README.md, volte aqui e clique em "Ok".</p>
+            <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo7" style="display:none">
+            <p>Ótimo! Agora que você tem um arquivo README.md, o próximo passo é adicionar o arquivo README.md ao Git.</p>
+            <p>Você já adicionou o arquivo README.md ao Git?</p>
+            <button onclick="proximo('sim')">Sim</button>
+            <button onclick="explicarPasso(8)">Não</button>
+            </div>
+            
+            <div id="passo8" style="display:none">
+            <p>Ok, então vamos adicionar o arquivo README.md ao Git.</p>
+            <p>No terminal ou Git Bash, execute o seguinte comando:</p>
+            <code>git add README.md</code>
+            <p>Depois de adicionar o arquivo README.md, volte aqui e clique em "Ok".</p>
+            <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo9" style="display:none">
+            <p>Ótimo! Agora que o arquivo README.md foi adicionado ao Git, o próximo passo é fazer um commit das mudanças.</p>
+            <p>Você já fez um commit das mudanças?</p>
+            <button onclick="proximo('sim')">Sim</button>
+            <button onclick="explicarPasso(10)">Não</button>
+            </div>
+            
+            <div id="passo10" style="display:none">
+            <p>Ok, então vamos fazer um commit das mudanças.</p>
+            <p>No terminal ou Git Bash, execute o seguinte comando:</p>
+            <code>git commit -m "Adicionado arquivo README.md"</code>
+            <p>Depois de fazer o commit das mudanças, volte aqui e clique em "Ok".</p>
+            <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo11" style="display:none">
+            <p>Perfeito! Agora que o commit foi feito, o próximo passo é criar um repositório no GitHub.</p>
+            <p>Você já criou um repositório no GitHub?</p>
+            <button onclick="proximo('sim')">Sim</button>
+            <button onclick="explicarPasso(12)">Não</button>
+            </div>
+            
+            <div id="passo12" style="display:none">
+            <p>Ok, então vamos criar um repositório no GitHub.</p>
+            <p>Abra o GitHub e faça login na sua conta.</p>
+            <p>Em seguida, clique no botão verde "New" na página inicial do GitHub.</p>
+            <p>Dê um nome ao seu repositório e, em seguida, clique no botão "Create repository".</p>
+            <p>Depois de criar o repositório, volte aqui e clique em "Ok".</p>
+            <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo13" style="display:none">
+            <p>Ótimo! Agora que o repositório foi criado no GitHub, o próximo passo é conectar o repositório local ao repositório remoto.</p>
+            <p>Você sabe qual é o URL do repositório remoto?</p>
+            <button onclick="proximo('sim')">Sim</button>
+            <button onclick="explicarPasso(14)">Não</button>
+            </div>
+            <div id="passo14" style="display:none">
+                <p>Ok, então vamos obter o URL do repositório remoto.</p>
+                <p>No GitHub, vá até o seu repositório e clique no botão "Clone or download".</p>
+                <p>Copie o URL do repositório.</p>
+                <p>Depois de obter o URL do repositório, volte aqui e clique em "Ok".</p>
+                <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo15" style="display:none">
+                <p>Excelente! Agora que temos o URL do repositório remoto, o próximo passo é conectar o repositório local ao repositório remoto.</p>
+                <p>No terminal ou Git Bash, execute o seguinte comando:</p>
+                <code>git remote add origin URL_DO_REPOSITORIO_REMOTO</code>
+                <p>Lembre-se de substituir "URL_DO_REPOSITORIO_REMOTO" pelo URL que você copiou anteriormente.</p>
+                <p>Depois de conectar o repositório local ao repositório remoto, volte aqui e clique em "Ok".</p>
+                <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo16" style="display:none">
+                <p>Maravilhoso! Agora que o repositório local está conectado ao repositório remoto, o próximo passo é enviar as mudanças para o repositório remoto.</p>
+                <p>Você já enviou as mudanças para o repositório remoto?</p>
+                <button onclick="proximo('sim')">Sim</button>
+                <button onclick="explicarPasso(17)">Não</button>
+            </div>
+            
+            <div id="passo17" style="display:none">
+                <p>Ok, então vamos enviar as mudanças para o repositório remoto.</p>
+                <p>No terminal ou Git Bash, execute o seguinte comando:</p>
+                <code>git push -u origin master</code>
+                <p>Depois de enviar as mudanças para o repositório remoto, volte aqui e clique em "Ok".</p>
+                <button onclick="proximo('ok')">Ok</button>
+            </div>
+            
+            <div id="passo18" style="display:none">
+                <p>Parabéns! Você criou um repositório no GitHub e adicionou um arquivo HTML com instruções sobre como criar um repositório no Git.</p>
+            </div>
+        </div>
+    </div>
+          <script src="script.js"></script>
+  </body>
+</html>
+          
